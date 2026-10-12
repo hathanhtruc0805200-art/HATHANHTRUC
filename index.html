@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-  </head>
-  <body>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
-<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
@@ -21,8 +8,8 @@
   
   <style>
     /* ==========================================
-       Y2K & RETRO GAMING STYLES (CSS)
-       ========================================== */
+        Y2K & RETRO GAMING STYLES (CSS)
+        ========================================== */
     :root {
       --bg-dark: #0a051b;
       --card-bg: rgba(22, 11, 46, 0.75);
@@ -182,7 +169,7 @@
       word-break: break-word;
     }
 
-    /* Unlocked Button State (Week 1 & 2) */
+    /* Unlocked Button State (Week 1 ~ 3) */
     .stage-btn.unlocked {
       background: linear-gradient(135deg, rgba(255, 0, 127, 0.2), rgba(0, 243, 255, 0.2));
       border-color: var(--y2k-cyan);
@@ -215,7 +202,7 @@
       transform: rotate(30deg) translate(100%, 100%);
     }
 
-    /* Locked Button State (Week 3 ~ 16) */
+    /* Locked Button State (Week 4 ~ 16) */
     .stage-btn.locked {
       background: rgba(30, 25, 50, 0.5);
       border-color: rgba(255, 255, 255, 0.1);
@@ -300,7 +287,7 @@
     <header class="profile-card">
       <div class="avatar-wrapper">
         <img class="avatar-img" src="https://i.postimg.cc/NfGBsjbx/image.png" alt="Avatar">
-        <span class="level-badge">LV. 02</span>
+        <span class="level-badge">LV. 03</span>
       </div>
       <h1 class="user-name">河青竹</h1>
       <p class="user-title">Web Dev Quest Portfolio</p>
@@ -320,12 +307,13 @@
         <span class="stage-title">今天吃甚麼？</span>
       </a>
 
-      <!-- Week 3 to 16 (Locked) -->
-      <!-- Week 3 -->
-      <div class="stage-btn locked" onclick="showLockedToast('Week 3')">
-        <span class="lock-icon">🔒</span>
-        <span class="stage-title">Week 3 - 未解鎖</span>
-      </div>
+      <!-- Week 3 (Unlocked) -->
+      <a href="w3/index.html" class="stage-btn unlocked">
+        <span class="stage-number">WEEK 03</span>
+        <span class="stage-title">迷因產生器</span>
+      </a>
+
+      <!-- Week 4 to 16 (Locked) -->
       <!-- Week 4 -->
       <div class="stage-btn locked" onclick="showLockedToast('Week 4')">
         <span class="lock-icon">🔒</span>
@@ -399,8 +387,8 @@
 
   <script>
     /* ==========================================
-       INTERACTIVE JAVASCRIPT
-       ========================================== */
+        INTERACTIVE JAVASCRIPT
+        ========================================== */
     let toastTimer;
 
     function showLockedToast(weekName) {
