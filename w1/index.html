@@ -1,33 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-  </head>
-  <body>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
-<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人數位名片</title>
-    <!-- 連結外部 CSS 樣式檔 -->
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS 程式碼直接寫在 <style> 標籤內 -->
+    <style>
+        /* 全局重設與馬卡龍漸層背景 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* 馬卡龍粉色到淡紫色的柔和漸層 */
+            background: linear-gradient(135deg, #ffd1dc 0%, #e8dff5 100%);
+            padding: 20px;
+        }
+
+        /* 主卡片區域 (現代感圓角、柔和微陰影) */
+        .card {
+            background: #ffffff;
+            width: 100%;
+            max-width: 360px;
+            padding: 40px 30px;
+            border-radius: 24px;
+            text-align: center;
+            /* 多層次軟陰影 */
+            box-shadow: 0 15px 35px rgba(186, 147, 186, 0.2);
+        }
+
+        /* 1. 圓形大頭貼 */
+        .avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #fff;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 2. 名字與自我介紹 */
+        .name {
+            font-size: 1.5rem;
+            color: #4a4e69;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: #7d8597;
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
+
+        /* 3. 按鈕配置 */
+        .button-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 馬卡龍蜜桃粉按鈕 (Instagram) */
+        .btn-ig {
+            background-color: #ffb7b2;
+            color: #ffffff;
+        }
+
+        /* 馬卡龍薄荷綠/天藍按鈕 (Email) */
+        .btn-email {
+            background-color: #b5ead7;
+            color: #4a4e69;
+        }
+
+        /* 按鈕懸停效果 */
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+            opacity: 0.95;
+        }
+    </style>
 </head>
 <body>
 
     <div class="card">
-        <!-- 1. 圓形大頭貼照片 (可替換 src 裡面的圖片網址) -->
+        <!-- 1. 圓形大頭貼照片 -->
         <img class="avatar" src="https://i.postimg.cc/T12WkWC8/image-(1).png" alt="大頭貼照片">
 
         <!-- 2. 名字與簡短自我介紹 -->
-        <h1 class="name"26122163</h1>
+        <h1 class="name">河氏青竹</h1>
         <p class="bio">熱愛生活與視覺探索的 UI/UX 設計新手 🎨</p>
 
         <!-- 3. Instagram 和 Email 按鈕 -->
